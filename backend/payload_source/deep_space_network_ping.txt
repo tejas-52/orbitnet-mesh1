@@ -1,0 +1,7 @@
+DEEP SPACE NETWORK PING
+-----------------------
+Target: Mars Relay Orbiter
+Distance: 225 million km
+Round Trip Time: 25 minutes
+Signal Strength: -142 dBm
+Status: Connected

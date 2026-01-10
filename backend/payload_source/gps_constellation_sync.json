@@ -1,0 +1,7 @@
+{
+    "constellation": "GPS",
+    "satellites_in_view": 12,
+    "position_dilution": 0.8,
+    "time_offset_ns": 1.2,
+    "sync_status": "Locked"
+}

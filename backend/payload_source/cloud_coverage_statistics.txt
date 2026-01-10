@@ -1,0 +1,7 @@
+CLOUD COVERAGE STATISTICS
+-------------------------
+Global Average: 67%
+Oceanic: 71%
+Continental: 62%
+Trend: Stable
+Instrument: Cloud-Cam-01

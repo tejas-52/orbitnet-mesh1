@@ -1,0 +1,8 @@
+{
+    "scan_id": "DEBRIS-2026-A",
+    "objects_detected": 3,
+    "closest_approach": 12.4,
+    "unit": "km",
+    "collision_probability": 0.000001,
+    "action_required": "None"
+}

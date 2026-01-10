@@ -1,0 +1,11 @@
+{
+    "timestamp": "2026-01-08T23:42:00Z",
+    "sensor": "Thermal-IR-01",
+    "resolution": "10m",
+    "data": {
+        "max_temp": 48.1,
+        "min_temp": -10.2,
+        "average": 18.3
+    },
+    "unit": "Celsius"
+}

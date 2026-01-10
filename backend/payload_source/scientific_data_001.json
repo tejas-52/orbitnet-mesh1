@@ -1,0 +1,13 @@
+{
+    "sensor_id": "SPECTRO-01",
+    "timestamp": "2026-01-08T23:26:00Z",
+    "data": {
+        "methane_concentration": 1.85,
+        "unit": "ppm",
+        "confidence": 0.98
+    },
+    "location": {
+        "lat": 34.05,
+        "lng": -118.24
+    }
+}

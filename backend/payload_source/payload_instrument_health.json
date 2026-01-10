@@ -1,0 +1,8 @@
+{
+    "instrument": "SPECTRO-01",
+    "voltage": 12.4,
+    "current": 1.2,
+    "temp": 18.5,
+    "status": "Nominal",
+    "uptime": "142 days"
+}

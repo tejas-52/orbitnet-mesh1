@@ -1,0 +1,6 @@
+RADIATION MONITORING LOG - LEO ORBIT
+-----------------------------------
+T+00:45:00 - 0.15 mSv/h (Normal)
+T+01:15:00 - 0.18 mSv/h (Normal)
+T+01:45:00 - 0.22 mSv/h (Slight increase - South Atlantic Anomaly)
+T+02:15:00 - 0.16 mSv/h (Normal)

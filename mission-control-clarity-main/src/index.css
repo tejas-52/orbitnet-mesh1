@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ORBITNET-MESH Space Mission Control Design System */
+
+@layer base {
+  :root {
+    /* Deep Space Theme - Dark by Default */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Cyan/Teal Primary - Space Communication */
+    --primary: 192 95% 55%;
+    --primary-foreground: 222 47% 5%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 270 50% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Status Colors */
+    --success: 152 76% 45%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 5%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 20%;
+    --input: 217 32% 17%;
+    --ring: 192 95% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 192 95% 55%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 217 32% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 20%;
+    --sidebar-ring: 192 95% 55%;
+  }
+
+  .dark {
+    /* Same as root for space theme */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 192 95% 55%;
+    --primary-foreground: 222 47% 5%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 270 50% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 20%;
+    --input: 217 32% 17%;
+    --ring: 192 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom Utility Classes for Space Theme */
+@layer components {
+  /* Glowing card effect */
+  .card-glow {
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.15),
+                0 0 40px -10px hsl(var(--primary) / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 30px -5px hsl(var(--primary) / 0.25),
+                0 0 60px -10px hsl(var(--primary) / 0.15);
+  }
+
+  /* Panel header style */
+  .panel-header {
+    @apply text-sm font-semibold uppercase tracking-wider text-foreground;
+  }
+
+  /* Telemetry value style */
+  .telemetry-value {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    @apply font-bold text-primary;
+  }
+
+  /* Status indicator */
+  .status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-connected {
+    @apply bg-success animate-pulse;
+  }
+
+  .status-blackout {
+    @apply bg-destructive animate-pulse;
+  }
+
+  /* Mission button style */
+  .btn-mission {
+    @apply px-4 py-2 rounded-lg border font-medium text-sm transition-all;
+    @apply bg-secondary/50 border-border text-foreground hover:bg-secondary;
+  }
+
+  /* Data stream animation */
+  .data-stream {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.5),
+      transparent
+    );
+    animation: dataFlow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes dataFlow {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Packet flow animation */
+  @keyframes packetMove {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  .packet-flow {
+    animation: packetMove 3s ease-in-out infinite;
+  }
+
+  /* Connection pulse */
+  @keyframes connectionPulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .connection-pulse {
+    animation: connectionPulse 2s ease-in-out infinite;
+  }
+
+  /* Broken link animation */
+  @keyframes brokenLink {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .broken-link {
+    animation: brokenLink 1s ease-in-out infinite;
+  }
+
+  /* Float animation for elements */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Glow pulse for active elements */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3);
+    }
+  }
+
+  .glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  /* Warning glow for buffer */
+  @keyframes warningGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(var(--warning) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--warning) / 0.6), 0 0 40px hsl(var(--warning) / 0.3);
+    }
+  }
+
+  .warning-glow {
+    animation: warningGlow 1.5s ease-in-out infinite;
+  }
+
+  /* Success glow for delivery */
+  @keyframes successGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(var(--success) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--success) / 0.6), 0 0 40px hsl(var(--success) / 0.3);
+    }
+  }
+
+  .success-glow {
+    animation: successGlow 2s ease-in-out infinite;
+  }
+
+  /* Starfield background */
+  .starfield {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--primary) / 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--foreground) / 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--foreground) / 0.3), transparent),
+      radial-gradient(2px 2px at 160px 120px, hsl(var(--primary) / 0.2), transparent),
+      radial-gradient(1px 1px at 230px 80px, hsl(var(--foreground) / 0.2), transparent),
+      radial-gradient(2px 2px at 300px 200px, hsl(var(--primary) / 0.3), transparent),
+      radial-gradient(1px 1px at 350px 150px, hsl(var(--foreground) / 0.2), transparent),
+      radial-gradient(2px 2px at 420px 50px, hsl(var(--foreground) / 0.3), transparent);
+    background-size: 500px 300px;
+    animation: starTwinkle 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes starTwinkle {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  /* Grid overlay */
+  .grid-overlay {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Font display for headers */
+  .font-display {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Tailwind Utilities for Status Colors */
+@layer utilities {
+  .text-success {
+    color: hsl(var(--success));
+  }
+
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+
+  .border-success {
+    border-color: hsl(var(--success));
+  }
+
+  .border-warning {
+    border-color: hsl(var(--warning));
+  }
+}

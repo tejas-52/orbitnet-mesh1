@@ -1,0 +1,7 @@
+ATMOSPHERIC PRESSURE PROFILE
+----------------------------
+100km: 0.03 Pa
+150km: 0.005 Pa
+200km: 0.0008 Pa
+250km: 0.0001 Pa
+Sensor: Baro-Sat-V2

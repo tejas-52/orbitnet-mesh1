@@ -1,0 +1,7 @@
+GROUND STATION HANDOVER LOG
+---------------------------
+[22:45:00] Exit: Kourou Station
+[22:45:05] Entry: Maspalomas Station
+[22:58:12] Exit: Maspalomas Station
+[22:58:20] Entry: Santa Maria Station
+Status: Seamless

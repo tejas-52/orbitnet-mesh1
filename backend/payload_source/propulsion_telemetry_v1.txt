@@ -1,0 +1,8 @@
+PROPULSION SYSTEM TELEMETRY
+--------------------------
+Tank Pressure: 240 bar
+Valve Status: Closed
+Thrust Vector: [0.0, 0.0, 1.0]
+Fuel Remaining: 84.2 kg
+Oxidizer Remaining: 126.5 kg
+Temperature: 22.4 C

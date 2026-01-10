@@ -1,0 +1,7 @@
+{
+    "calibration_id": "ST-992",
+    "status": "Success",
+    "residual_error": 0.00042,
+    "stars_tracked": 142,
+    "reference_catalog": "GAIA-DR3"
+}

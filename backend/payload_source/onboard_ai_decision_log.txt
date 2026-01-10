@@ -1,0 +1,7 @@
+ONBOARD AI DECISION LOG
+-----------------------
+[23:30:05] Event: Signal drop below 15%
+[23:30:06] Decision: Switch to Store-and-Forward mode
+[23:30:06] Reason: Reliability priority over latency
+[23:40:12] Event: EDRS-A Satellite visible
+[23:40:13] Decision: Initiate buffer flush via Relay

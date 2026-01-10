@@ -1,0 +1,8 @@
+{
+    "region": "North Atlantic",
+    "current_speed": 1.2,
+    "unit": "m/s",
+    "direction": 45,
+    "depth": "Surface",
+    "method": "Doppler-Radar"
+}
